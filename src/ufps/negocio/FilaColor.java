@@ -22,10 +22,9 @@ public class FilaColor {
     }
 
     /**
-     * Metodo contructor de la Clase FilaColor , recibe un entero para crear una
-     * nueva Secuencia de pixeles.
+     * Contructor de la Clase FilaColor
      *
-     * @param filas
+     * @param filas recibe un entero para crear una nueva Secuencia de pixeles.
      */
     public FilaColor(int filas) {
 
@@ -60,8 +59,14 @@ public class FilaColor {
      */
     public void setPixeles(Secuencia<Pixel> val) {
         this.pixeles = val;
-    }
-
+    
+    }   
+    
+     
+    /**
+     * Método que consiste en colocar en blanco los píxeles que se encuentren bajo un patrón de una  gama determinada.
+     * @param tipoColorRGB color que llega para realizar la busqueda de patrones de manera contigua en una fila
+     */ 
     public void detectarPatron(String tipoColorRGB) {
 
         
@@ -90,6 +95,10 @@ public class FilaColor {
         }
     }
     
+    /**
+     * Operación que permite invertir los pixeles de la imagen (volverlos a tono de grises) que pertenezcan a una gama determinada.
+     * @param tipoColorRGB gama elegida por el usuario para ser invertida.
+     */
     public void invertirGamma (String tipoColorRGB){
    
         for(int j = 0 ; j<this.getPixeles().length();j++){
@@ -104,6 +113,6 @@ public class FilaColor {
    
     }
 }
-/**
- * Fin De la Clase FilaColor
- */
+    /**
+     * Fin De la Clase FilaColor
+     */
