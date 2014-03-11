@@ -1,5 +1,5 @@
 /**
- * Clase que representa un Pixel.
+ * Clase que representa un Píxel.
  */
 package ufps.negocio;
 
@@ -14,17 +14,17 @@ public class Pixel {
     private Color rgb;
 
     /**
-     * Constructor Vacio de la clase Pixel.
+     * Constructor Vacío de la clase Píxel.
      */
     public Pixel() {
     }
 
     /**
-     * Constructor con parametro de la clase Pixel
+     * Constructor con parámetro de la clase Píxel
      *
-     * @param red:cantidad de rojo en un pixel.
-     * @param green:cantidad de verde en un pixel.
-     * @param blue:cantidad de azul en un pixel.
+     * @param red:cantidad de rojo en un píxel.
+     * @param green:cantidad de verde en un píxel.
+     * @param blue:cantidad de azul en un píxel.
      */
     public Pixel(int red, int green, int blue) {
 
@@ -33,9 +33,9 @@ public class Pixel {
     }
 
     /**
-     * Metodo get de la clase Pixel, retona el contenido RGB de el pixel.
+     * Método get de la clase Píxel, retorna el contenido RGB de el pixel.
      *
-     * @return color.
+     * @return  el contenido RGB del píxel.
      */
     public Color getRgb() {
 
@@ -44,7 +44,7 @@ public class Pixel {
     }
 
     /**
-     * Metodo set de la clase Pixel , permite cambiar el color actual del pixel
+     * Método set de la clase Píxel , permite cambiar el color actual del píxel
      * por uno nuevo.
      *
      * @param valor:Nuevo color al que se desea cambiar.
@@ -56,7 +56,7 @@ public class Pixel {
     }
 
     /**
-     * Metodo que permite cambiar el color de un pixel a Negro.
+     * Método que permite cambiar el color de un píxel a Negro.
      */
     public void cambiarANegro() {
         this.setRgb(new Color(0, 0, 0));
@@ -64,7 +64,7 @@ public class Pixel {
     }
 
     /**
-     * Metodo que permite cambiar el color de un Pixel a Blanco.
+     * Método que permite cambiar el color de un Píxel a Blanco.
      */
     public void cambiarABlanco() {
         this.setRgb(new Color(255, 255, 255));
@@ -72,7 +72,7 @@ public class Pixel {
     }
 
     /**
-     * Metodo que permite cambiar el color de un Pixel a su gamma en Gris.
+     * Método que permite cambiar el color de un Píxel a su gamma en Gris.
      */
     public void pintarEnGris() {
         int color = (this.rgb.getRed() + rgb.getBlue() + rgb.getBlue()) / 3;
@@ -82,7 +82,7 @@ public class Pixel {
     }
 
     /**
-     * Metodo booleano que permite saber si un color es gamma de otro color.
+     * Método booleano que permite saber si un color es gamma de otro color.
      *
      * @param val: String al cual deseamos preguntar su gamma.
      * @return true: si el String pertenece a una gamma indicada.
