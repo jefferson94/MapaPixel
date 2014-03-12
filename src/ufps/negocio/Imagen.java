@@ -20,16 +20,16 @@ public class Imagen {
     Secuencia<FilaColor> filaColores;
 
     /**
-     * Constructor vacio de la clase Imagen
+     * Constructor vacío de la clase Imagen
      *
      */
     public Imagen() {
     }
 
     /**
-     * Constructor de la clase Imagen con parametros
+     * Constructor de la clase Imagen con parámetros
      *
-     * @param n : Número de filas que tendra la secuencia.
+     * @param n : Número de filas que tendrá la secuencia.
      * @param m: Número de Columnas utilizada para crear una secuencia de
      * Filacolor.
      */
@@ -107,7 +107,7 @@ public class Imagen {
     }
 
     /**
-     * Metodo que permite cambiar a su gamma de grises un color.
+     * Método que permite cambiar a su gamma de grises un color.
      *
      * @param tipoColorRGB: color al cual deseamos convertir a su escala de
      * grises.
@@ -128,7 +128,7 @@ public class Imagen {
     }
 
     /**
-     * Método que permite detectar si un color es de una gamma especifica
+     * Método que permite detectar si un color es de una gamma específica
      * (Roja,Verde,Azul) y si hay mas de dos colores de la misma gamma seguidos
      * en la secuencia se cambian a blanco.
      *
@@ -153,7 +153,7 @@ public class Imagen {
      * @param fila: posición de la que se desea comenzar a cortar.
      * @param columna: Columna de la que se desa comenzar a cortar.
      * @param ancho: ancho que se desa recortar.
-     * @param alto :numero de pixeles que se desean cortar
+     * @param alto :número de píxeles que se desean cortar
      *
      */
     public void cortar(int fila, int columna, int ancho, int alto) throws ExceptionUFPS {

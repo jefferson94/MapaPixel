@@ -1,5 +1,5 @@
 /*
- * Clase Filacolor que representa una Secuencia de Pixeles.
+ * Clase Filacolor que representa una Secuencia de Píxeles.
  */
 package ufps.negocio;
 
@@ -16,15 +16,15 @@ public class FilaColor {
     Secuencia<Pixel> pixeles;
 
     /**
-     * Constructor vacio de la clase FilaColor.
+     * Constructor vacío de la clase FilaColor.
      */
     public FilaColor() {
     }
 
     /**
-     * Contructor de la Clase FilaColor
+     * Contructor con parámetros de la Clase FilaColor
      *
-     * @param filas recibe un entero para crear una nueva Secuencia de pixeles.
+     * @param filas recibe un entero para crear una nueva Secuencia de píxeles.
      */
     public FilaColor(int filas) {
 
@@ -41,8 +41,8 @@ public class FilaColor {
     }
 
     /**
-     * Metodo get de la Clase Secuencia<pixel> que retorna la secuencia de
-     * pixeles actual.
+     * Método get de la Clase Secuencia<pixel> que retorna la secuencia de
+     * píxeles actual.
      *
      * @return Secuencia
      */
@@ -52,65 +52,66 @@ public class FilaColor {
     }
 
     /**
-     * Metodo set de la clase Secuencia<pixel> que permite modificar la
+     * Método set de la clase Secuencia<pixel> que permite modificar la
      * secuencia actual por una nueva.
      *
-     * @param val
+     * @param val variable para realizar su respectivo cambio
      */
     public void setPixeles(Secuencia<Pixel> val) {
         this.pixeles = val;
-    
-    }   
-    
-     
+
+    }
+
     /**
-     * Método que consiste en colocar en blanco los píxeles que se encuentren bajo un patrón de una  gama determinada.
-     * @param tipoColorRGB color que llega para realizar la busqueda de patrones de manera contigua en una fila
-     */ 
+     * Método que consiste en colocar en blanco los píxeles que se encuentren
+     * bajo un patrón de una gama determinada.
+     *
+     * @param tipoColorRGB color que llega para realizar la búsqueda de patrones
+     * de manera contigua en una fila
+     */
     public void detectarPatron(String tipoColorRGB) {
 
-        
+
         int cont = 0;
-         
+
         for (int i = 0; i < this.getPixeles().length(); i++) {
-            
-            if (this.getPixeles().get(i).isGamma(tipoColorRGB)){
-            
-            if (cont ==1){
-            
-            this.getPixeles().get(i-1).cambiarABlanco();
-            this.getPixeles().get(i).cambiarABlanco();
-            
-            }
-            if ( cont>1) {
+
+            if (this.getPixeles().get(i).isGamma(tipoColorRGB)) {
+
+                if (cont == 1) {
+
+                    this.getPixeles().get(i - 1).cambiarABlanco();
+                    this.getPixeles().get(i).cambiarABlanco();
+
+                }
+                if (cont > 1) {
                     this.getPixeles().get(i).cambiarABlanco();
                 }
-            cont ++;
-            }
-           else
-            {
-            
-            cont = 0 ;
+                cont++;
+            } else {
+
+                cont = 0;
             }
         }
     }
-    
+
     /**
-     * Operación que permite invertir los pixeles de la imagen (volverlos a tono de grises) que pertenezcan a una gama determinada.
+     * Operación que permite invertir los píxeles de la imagen (volverlos a tono
+     * de grises) que pertenezcan a una gama determinada.
+     *
      * @param tipoColorRGB gama elegida por el usuario para ser invertida.
      */
-    public void invertirGamma (String tipoColorRGB){
-   
-        for(int j = 0 ; j<this.getPixeles().length();j++){
-            
-                boolean c =this.getPixeles().get(j).isGamma(tipoColorRGB);
-         if (c )
-         {
-                 this.getPixeles().get(j).pintarEnGris();
-         }
-         
-             }
-   
+    public void invertirGamma(String tipoColorRGB) {
+
+        for (int j = 0; j < this.getPixeles().length(); j++) {
+
+            boolean c = this.getPixeles().get(j).isGamma(tipoColorRGB);
+            if (c) {
+                this.getPixeles().get(j).pintarEnGris();
+            }
+
+        }
+
     }
 }
     /**
